@@ -114,14 +114,23 @@ detectLevel();
 
 // создаем функцию для определения необязательных расходов
 function chooseOptExpenses() {
-   let optionalQuestion1 = prompt("Статья необязательных расходов?"),
-      optionalQuestion2 = prompt("Статья необязательных расходов?"),
-      optionalQuestion3 = prompt("Статья необязательных расходов?");
 
-   appData.optionalExpenses[optionalQuestion1] = optionalQuestion1;
-   appData.optionalExpenses[optionalQuestion2] = optionalQuestion2;
-   appData.optionalExpenses[optionalQuestion3] = optionalQuestion3;
+   for (let i = 1; i < 2; i++) {
+      let a = prompt("Статья необязательных расходов?");
+      let b = prompt("Статья необязательных расходов?");
+      let c = prompt("Статья необязательных расходов?");
+
+      if ((typeof (a, b, c)) === 'string' && (typeof (a, b, c)) != null &&
+         a != '' && b != '' && c != '' && a.length < 50 && b.length < 50 && c.length < 50) {
+         console.log('function works');
+         
+         appData.optionalExpenses[1] = a;
+         appData.optionalExpenses[2] = b;
+         appData.optionalExpenses[3] = c;
+
+      } else {
+         i--;
+      }
+   }
 }
 chooseOptExpenses();
-
-alert("гит - это боль");
