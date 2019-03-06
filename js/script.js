@@ -115,18 +115,13 @@ detectLevel();
 // создаем функцию для определения необязательных расходов
 function chooseOptExpenses() {
 
-   for (let i = 1; i < 2; i++) {
+   for (let i = 1; i <= 3; i++) {
       let a = prompt("Статья необязательных расходов?");
-      let b = prompt("Статья необязательных расходов?");
-      let c = prompt("Статья необязательных расходов?");
 
-      if ((typeof (a, b, c)) === 'string' && (typeof (a, b, c)) != null &&
-         a != '' && b != '' && c != '' && a.length < 50 && b.length < 50 && c.length < 50) {
-         console.log('function works');
+      if ((typeof (a)) === 'string' && (typeof (a)) != null &&
+         a != '' && a.length < 50) {
          
-         appData.optionalExpenses[1] = a;
-         appData.optionalExpenses[2] = b;
-         appData.optionalExpenses[3] = c;
+         appData.optionalExpenses[i] = a;
 
       } else {
          i--;
